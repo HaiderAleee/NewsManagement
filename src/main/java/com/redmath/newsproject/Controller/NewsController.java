@@ -16,6 +16,7 @@ public class NewsController {
     NewsController(NewsService service){
         this.newsService=service;
     }
+
     //  Get All News
     @GetMapping("/news")
     public List<news> getAllNews() {

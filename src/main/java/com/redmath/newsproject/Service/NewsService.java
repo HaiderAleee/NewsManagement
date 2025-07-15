@@ -3,11 +3,13 @@ package com.redmath.newsproject.Service;
 
 import com.redmath.newsproject.Model.news;
 import com.redmath.newsproject.Repository.NewsRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import com.redmath.newsproject.Model.news;
 import java.time.LocalDate;
 import java.util.List;
 
+@Slf4j
 @Service
 public class NewsService {
 
@@ -19,6 +21,7 @@ public class NewsService {
 
     public List<news> getallnews()
     {
+        log.info("This message is here to test logging");
         return repository.findAll();
     }
 
